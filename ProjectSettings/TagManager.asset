@@ -9,6 +9,8 @@ TagManager:
   - Hard
   - Easy
   - Medium
+  - Start
+  - Wall
   layers:
   - Default
   - TransparentFX
