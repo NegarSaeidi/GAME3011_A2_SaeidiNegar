@@ -6,6 +6,9 @@ TagManager:
   tags:
   - ClickPoint
   - Unlock
+  - Hard
+  - Easy
+  - Medium
   layers:
   - Default
   - TransparentFX

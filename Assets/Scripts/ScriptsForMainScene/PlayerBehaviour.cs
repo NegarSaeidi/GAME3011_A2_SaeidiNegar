@@ -23,7 +23,25 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
+        Vector3 pos= new Vector3(-4.94999981f, 1.21800005f, -0.589999974f);
+        if (TransitionToLockPicking.easyLoaded || TransitionToLockPicking.mediumLoaded || TransitionToLockPicking.hardLoaded)
+        {
+            Debug.Log(PlayerPrefs.GetFloat("PlayerPosX"));
+            if (PlayerPrefs.HasKey("PlayerPosX"))
+                pos.x = PlayerPrefs.GetFloat("PlayerPosX");
+            if (PlayerPrefs.HasKey("PlayerPosY"))
+                pos.y = PlayerPrefs.GetFloat("PlayerPosY");
+            if (PlayerPrefs.HasKey("PlayerPosZ"))
+                pos.z = PlayerPrefs.GetFloat("PlayerPosZ");
+            TransitionToLockPicking.easyChestIsOpen = true;
+            GetComponent<CharacterController>().enabled = false;
+            this.gameObject.transform.position = pos;
+            GetComponent<CharacterController>().enabled = true;
+        }
+      
         controller = GetComponent<CharacterController>();
+        Cursor.visible = true;
     }
 
     // Update is called once per frame

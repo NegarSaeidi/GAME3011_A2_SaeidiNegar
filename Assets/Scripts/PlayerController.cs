@@ -8,9 +8,11 @@ public class PlayerController : MonoBehaviour
     public GameObject[] Locks;
     public GameObject BorderLine;
     private GameObject ActiveLock;
-    public int MargineArea;
+    public float MargineArea;
     [SerializeField] 
     TextMeshProUGUI percentage;
+    [SerializeField]
+    private int force;
     private int score;
     private Position playerPos;
     private void Start()
@@ -19,6 +21,10 @@ public class PlayerController : MonoBehaviour
         playerPos = Position.MOST_RIGHT;
         transform.position = ActiveLockIndicator[(int)playerPos].transform.position;
         ActiveLock = Locks[(int)playerPos];
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+
+
     }
     private void Update()
     {
@@ -28,7 +34,7 @@ public class PlayerController : MonoBehaviour
             if (ActiveLock.tag != "Unlock")
             {
                 //ActiveLock.transform.position = new Vector3(ActiveLock.transform.position.x, ActiveLock.transform.position.y + 0.1f, ActiveLock.transform.position.z);
-                ActiveLock.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,1f));
+                ActiveLock.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,force));
             }
         }
         CheckForLock();
