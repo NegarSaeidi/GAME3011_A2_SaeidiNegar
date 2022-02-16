@@ -14,16 +14,16 @@ public class CameraController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensivity;
 
-       // XRotation -= mouseY;
+        // XRotation -= mouseY;
         XRotation = Mathf.Clamp(XRotation, -90.0f, 90.0f);
         transform.localRotation = Quaternion.Euler(XRotation, 0.0f, 0.0f);
         playerBody.Rotate(Vector3.up * mouseX);
     }
+    // Update is called once per frame
+   
 }

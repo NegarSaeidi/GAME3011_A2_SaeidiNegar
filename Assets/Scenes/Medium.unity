@@ -2981,7 +2981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6045477418843123702, guid: 1d9ea47add91ee649b345f45003f3f98, type: 3}
       propertyPath: m_GravityScale
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6045477418843123705, guid: 1d9ea47add91ee649b345f45003f3f98, type: 3}
       propertyPath: BorderLine
