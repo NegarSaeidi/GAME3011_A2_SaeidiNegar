@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     TextMeshProUGUI percentage;
     [SerializeField]
-    private int force;
+    private float force;
     private int score;
     private Position playerPos;
     private void Start()
@@ -28,17 +28,22 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+
         ProcessInput();
         if (Input.GetKey(KeyCode.W))
         {
             if (ActiveLock.tag != "Unlock")
             {
-                //ActiveLock.transform.position = new Vector3(ActiveLock.transform.position.x, ActiveLock.transform.position.y + 0.1f, ActiveLock.transform.position.z);
+               
                 ActiveLock.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,force));
             }
         }
         CheckForLock();
-
+        skillSet();
+    }
+    private void skillSet()
+    {
+        force = SkillManager.forceForPins;
     }
     private void CheckForLock()
     {

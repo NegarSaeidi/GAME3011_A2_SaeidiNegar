@@ -54,7 +54,15 @@ public class PlayerBehaviour : MonoBehaviour
         }
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-
+        if (x != 0 || z!=0)
+        {
+           
+            if (GetComponent<AudioSource>().isPlaying == false)
+            {
+               
+                GetComponent<AudioSource>().Play();
+            }
+        }
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * maxSpeed * Time.deltaTime);
         if (Input.GetButton("Jump") && isGrounded)
