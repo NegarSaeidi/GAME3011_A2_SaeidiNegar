@@ -34,10 +34,11 @@ public class PlayerBehaviour : MonoBehaviour
                 pos.y = PlayerPrefs.GetFloat("PlayerPosY");
             if (PlayerPrefs.HasKey("PlayerPosZ"))
                 pos.z = PlayerPrefs.GetFloat("PlayerPosZ");
-            TransitionToLockPicking.easyChestIsOpen = true;
+
             GetComponent<CharacterController>().enabled = false;
             this.gameObject.transform.position = pos;
             GetComponent<CharacterController>().enabled = true;
+           
         }
       
         controller = GetComponent<CharacterController>();

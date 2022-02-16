@@ -13,6 +13,8 @@ public class KeyController : MonoBehaviour
     {
         GetComponent<PlayerController>().enabled = false;
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     private void Update()
     {

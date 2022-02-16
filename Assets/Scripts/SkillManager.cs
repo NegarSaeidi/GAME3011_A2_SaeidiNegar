@@ -9,7 +9,7 @@ public class SkillManager : MonoBehaviour
     private void Start()
     {
         horizontalForce = 5;
-        verticalForce = 500;
+        verticalForce = 700;
         forceForPins = 1;
     }
     public void OnBeginnerClick()

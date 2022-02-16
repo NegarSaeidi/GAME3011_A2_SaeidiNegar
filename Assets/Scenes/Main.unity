@@ -1708,7 +1708,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81897084f696a748adb94c52f0a1529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestTop: {fileID: 1487711200}
+  easyChestTop: {fileID: 513916897}
+  mediumChestTop: {fileID: 1487711200}
+  hardChestTop: {fileID: 1111972802}
 --- !u!1001 &428958103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4483,7 +4485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81897084f696a748adb94c52f0a1529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestTop: {fileID: 513916897}
+  easyChestTop: {fileID: 513916897}
+  mediumChestTop: {fileID: 1487711200}
+  hardChestTop: {fileID: 1111972802}
 --- !u!65 &1524336182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6375,7 +6379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81897084f696a748adb94c52f0a1529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestTop: {fileID: 1111972802}
+  easyChestTop: {fileID: 513916897}
+  mediumChestTop: {fileID: 1487711200}
+  hardChestTop: {fileID: 1111972802}
 --- !u!1 &2130361480
 GameObject:
   m_ObjectHideFlags: 0
