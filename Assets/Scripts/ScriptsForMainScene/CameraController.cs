@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
-    private void FixedUpdate()
+    private void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensivity;
